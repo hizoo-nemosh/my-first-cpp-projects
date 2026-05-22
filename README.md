@@ -1,5 +1,4 @@
-# my-first-cpp-projects
-# C++ Console Utilities & Games
+# C++ Console Utilities & Mathematical Analysers
 
 Hello! I am a 13-year-old self-taught developer. This repository serves as a personal showcase of my early steps in C++ programming, focusing on core logic, memory management, and algorithm optimization. 
 
@@ -14,20 +13,27 @@ Everything here was written, compiled, and tested entirely on an Android device.
 
 ## Repository Contents
 
-### 1. Fibonacci.cpp
+### 1. PARABOLA-ANALYZER.cpp (Quadratic Master v1.0)
+An advanced engineering tool for quadratic equation and function analysis.
+* Implements complex number calculations for negative discriminants ($\sqrt{|D|}$) with standard real-part and imaginary-part decomposition.
+* Locates parabola vertices ($x_v, y_v$) and evaluates branch orientation dynamically.
+* Computes analytical definite integrals using the Newton-Leibniz theorem to evaluate the exact area under the curve.
+* **UI/UX Features:** Built with a `switch-case` interactive menu and uses ANSI escape sequences (`\033[2J\033[H`) to clear the mobile terminal screen between operations.
+
+### 2. Fibonacci.cpp
 Generates Fibonacci numbers up to $N \le 90$. 
 * Uses `unsigned long long` to prevent integer overflow and guarantee exact precision for large numbers.
 * Configured with `std::fixed` and `std::setprecision(0)` for clean digit output without scientific notation.
 * Calculates the Golden Ratio value ($\approx 1.618$) at the end of the sequence using double precision casting.
 * **Optimization:** Implements sequence progression using a fast double-`swap()` mechanic instead of multiple temporary assignments.
 
-### 2. GuessTheNumber.cpp
+### 3. GuessTheNumber.cpp
 A classic console-based guessing game. 
 * Uses `rand()` with `time(NULL)` seeding for pseudo-random number generation.
 * The computer picks a number from 1 to 100, and the player has 7 attempts to guess it.
 * Provides immediate interactive feedback ("more/less" hints) after each turn and handles strict state verification for win/loss conditions.
 
-### 3. prime-search-naive.cpp
+### 4. sieve-of-eratosthenes.cpp
 Finds all prime numbers from 2 up to N.
 * Implemented via the trial division algorithm.
 * **Optimization:** Optimized by limiting the inner loop boundary to $\sqrt{i}$ (`std::sqrt(i)`). This significantly reduces execution time and avoids unnecessary division iterations, turning a heavy brute-force search into an efficient algorithm.
